@@ -29,19 +29,12 @@ $( document ).ready(function(){
     
     $("#addUserBtn").click(function(){
 		
-		var name = $("#name").val();
-		alert(name);
-		var address = $("#address").val();
-		alert(address);
+		var name = $("#userNameField").val();
+		var address = $("#userAddressField").val();
 		var userPhoneField = $("#userPhoneField").val();
-		alert(userPhoneField);
 		var partyid = getURLParameter("eid");
-		alert(partyid);
 		var spot = -1; 
-		alert(name);
-		
-		alert(name +  " " +  address + " " +  partyid + " " + spot + " " + phone)
-		
+				
         if($("#RideQuest").val() == "Driver")
         {
             spot = $("#availableSeat").val();
