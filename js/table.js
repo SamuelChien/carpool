@@ -13,9 +13,7 @@ $( document ).ready(function(){
 	  		    );
 	  		    
                 $(".iternaryPerson").click(function(){
-                    $(this).css("background-color","#ADD8E6");
-                    //alert("yo");
-                    //return false;
+                    $(this).css("background-color","#C0C0C0");
                 });
        }
    });
