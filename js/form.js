@@ -22,7 +22,7 @@ $( document ).ready(function(){
     
     $("#createEventBtn").click(function(){
         insertParty($("#partyNameField").val(), $("#partyAddressField").val()).done(function(item){
-            getPartyByGuid(item.id, function(){
+            getPartyByGuid(item.id, function(item){
                 window.location.href="/addUser.html?partyid=" + item.partyid;
             })
         });
