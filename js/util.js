@@ -13,14 +13,9 @@ function insertUser(name, phone, partyid, address, spot) {
   return TABLE_CLIENT.getTable("user").insert(item);
 }
 
-function getParty(partyid) {
+function getParty(partyid, success) {
   var partyApi = BASE_URL + "api/party?partyid=" + partyid;
-  $.getJSON(partyApi, {
-    format: "json"
-  })
-  .done(function(data) {
-    return data;
-  })
+  $.getJSON(partyApi, success);
 }
 
 function getPartyByGuid(guid, success) {
