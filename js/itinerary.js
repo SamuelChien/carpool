@@ -16,7 +16,7 @@ $( document ).ready(function(){
 				}
 			}
 		}
-		passenger.sort(function(a, b) {return a.order - b.order});
+		passengers.sort(function(a, b) {return a.order - b.order});
 		for(var i = 0; i < passengers.length; i++) {
 			$('.itinerary')[0].append(renderPassenger(passengers[i]));
 		}
