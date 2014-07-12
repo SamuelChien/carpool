@@ -29,7 +29,7 @@ $( document ).ready(function(){
         return false;
     });
     
-    $(".iternaryPerson").click(function(){
+    $(".smallNumberCircle").click(function(){
         //$(this).css("background-color","#ADD8E6");
         alert("yo");
         return false;
