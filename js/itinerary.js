@@ -4,7 +4,7 @@ $( document ).ready(function(){
 	var userid = getURLParameter('userid');
 	var driverid = "";
 	var passengers = [];
-	var driver = [];
+	var driver = {};
 	getItineraryData(partyid, function(passengerList){
 		for(var i = 0; i < passengerList.length; i++) {
 			var pass = passengerList[i];
@@ -14,7 +14,7 @@ $( document ).ready(function(){
 		}
 		for(var i = 0; i < passengerList.length; i++) {
 			var pass = passengerList[i];
-			if(pass.driverid == userid) {
+			if(pass.driverid == driverid) {
 				if(pass.spot > 0) {
 					driver = pass;
 					passengers.push(pass);
