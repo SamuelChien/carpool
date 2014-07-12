@@ -13,7 +13,6 @@ function insertUser(name, phone, partyid, address, spot) {
   return TABLE_CLIENT.getTable("user").insert(item);
 }
 
-<<<<<<< HEAD
 function getParty(partyid, success) {
   var partyApi = BASE_URL + "api/party?partyid=" + partyid;
   $.getJSON(partyApi, success);
