@@ -24,7 +24,7 @@ $( document ).ready(function(){
 
 	function renderPassenger(passenger) {
 		var passengerTemplate = '<div class="iternaryPerson">'+
-				'<div class="numberCircle">passengerAbbr</div>'+
+				'<div class="numberCircle colorClass">passengerAbbr</div>'+
 				'<b>passengerRole:</b> passengerName <br>'+
 				'<b>Number:</b> passengerPhone <br>'+
 				'<b>Address:</b><a href="http://maps.google.com/?q=passengerMapQuery"> passengerAddress</a> <br>'+
@@ -40,6 +40,10 @@ $( document ).ready(function(){
 		html = html.replace('passengerName', passenger.name);
 		html = html.replace('passengerPhone', passenger.phone);
 		html = html.replace('passengerMapQuery', passenger.address.replace(' ', '+'));
+		
+		var randomIndex = passenger.name[0].charCodeAt(0) % 5 + 1;
+        var colorClass = "colorClass" + randomIndex.toString();
+		html = html.replace('colorClass', colorClass);
 		return html;
 	}
 });

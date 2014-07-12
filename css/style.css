@@ -25,15 +25,25 @@ p {
 	margin-bottom:10%;
 	padding: 0 6%;
 }
+
+p2{
+   font-size:18px; 
+   text-decoration:none;
+   padding:0px;
+   margin:2%;
+   color:#000;
+}
+
+
 h1 {
     font-size:64px;
 	margin-top:15%;
-	margin-bottom:10%;
+	margin-bottom:5%;
 }
 h2 {
     font-size:64px;
-	margin-top:10%;
-	margin-bottom:5%;
+	margin-top:6%;
+	margin-bottom:0px;
 }
 hr {
 	border: 1px dashed #eee;
@@ -84,9 +94,8 @@ a.scroll:hover {
     height: 144px;
     padding: 3px;
 
-    background: #999;
-    border: 2px solid #666;
-    color: #666;
+    border: 2px solid #fff;
+    color: #fff;
     text-align: center;
 
     font: 128px Arial, sans-serif;
