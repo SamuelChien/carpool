@@ -29,7 +29,7 @@ $( document ).ready(function(){
         return false;
     });
     
-    $(".iternaryPerson").mousedown(function(){
+    $(".iternaryPerson").on("mousedown", function(){
         $(this).css("background-color","#ADD8E6");
     });
     
