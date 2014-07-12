@@ -2,8 +2,8 @@
 $( document ).ready(function(){
 	var partyid = getURLParameter('partyid');
 	var driverid = getURLParameter('driverid');
-	var passengers;
-	var driver;
+	var passengers = [];
+	var driver = [];
 	getItineraryData(partyid, function(passengerList){
 		for(var i = 0; i < passengerList.length; i++) {
 			var pass = passengerList[i];
@@ -16,7 +16,7 @@ $( document ).ready(function(){
 				}
 			}
 		}
-		passenger.sort(function(a, b) {return a.order - b.order});
+		passengers.sort(function(a, b) {return a.order - b.order});
 		for(var i = 0; i < passengers.length; i++) {
 			$('.itinerary')[0].append(renderPassenger(passengers[i]));
 		}
