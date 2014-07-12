@@ -7,6 +7,7 @@ body {
 	color:#999;
 	vertical-align:baseline;
 	width:100%;
+	height:100%;
 	flow:left;
 	top:0px;
 	left:0px;
@@ -16,7 +17,7 @@ body {
 h1, h2, h3 {
 	font-weight:bold;
 	color:#2a2a2a;
-	margin:0;
+	margin:15%;
 }
 p {
 	margin-bottom:15px;
@@ -56,6 +57,7 @@ a.scroll:hover {
 	text-align:center;
 	float:left;
 	margin:10% 10%;
+	height: 500px;
 }
 .login-form, .forgot-pwd {
 	width:75%;
