@@ -8,40 +8,61 @@
 
 </head>
 <body>
-<!--Login Section-->
-<div class="section" id="section1">
-  <div class="login-form">
-    <h2>Join Meet Up</h2>
-    <div>
-      <form class="form-wrapper-01">
-        <input id="userNameField" class="inputbox " type="text" placeholder="Name" />
-        <input id="userAddressField" class="inputbox" type="text" placeholder="Address" />
-		<input id="userPhoneField"class="inputbox" type="number" placeholder="Phone Number" />
-		<select id="RideQuest" class="inputbox inputSelection">
-		  <option value="Passenger">I need a ride</option>
-		  <option value="Driver">I can drive and have extra spot for </option>
-		</select>
-		<select id="availableSeat" class="inputbox inputSelection">
-		  <option value="0">0 more</option>
-		  <option value="1">1 more</option>
-		  <option value="2">2 more</option>
-		  <option value="3">3 more</option>
-		  <option value="4">4 more</option>
-		  <option value="5">5 more</option>
-		</select>
-        <p><a id="addUserBtn" href="#" class="button">Submit <i class="icon-paper-plane"></i></a></p>
-      </form>
+  <!--Login Section-->
+  <div class="section" id="section1">
+    <div class="login-form">
+      <h2>Join Meet Up</h2>
+      <div>
+        <form class="form-wrapper-01">
+          <input id="userNameField" class="inputbox " type="text" placeholder="Name" />
+          <input id="userAddressField" class="inputbox" type="text" placeholder="Address" />
+          <input type="checkbox" name="gpscheckbox" value="GPS" onclick='gpsonclick(this);'>Use my current GPS location</input>
+          <input id="userPhoneField"class="inputbox" type="number" placeholder="Phone Number" />
+          <select id="RideQuest" class="inputbox inputSelection">
+            <option value="Passenger">I need a ride</option>
+            <option value="Driver">I can drive and have extra spot for </option>
+          </select>
+          <select id="availableSeat" class="inputbox inputSelection">
+            <option value="0">0 more</option>
+            <option value="1">1 more</option>
+            <option value="2">2 more</option>
+            <option value="3">3 more</option>
+            <option value="4">4 more</option>
+            <option value="5">5 more</option>
+          </select>
+          <p><a id="addUserBtn" href="#" class="button">Submit <i class="icon-paper-plane"></i></a></p>
+        </form>
+      </div>
     </div>
   </div>
-</div>
-<!--END: Login Section-->
-<!--Script for Horizontal Scrolling-->
-<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.3.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="js/util.js"></script>
-<script type="text/javascript" src="js/constants.js"></script>
-<script type="text/javascript" src="js/form.js"></script>
+  <!--END: Login Section-->
+  <!--Script for Horizontal Scrolling-->
+  <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.3.min.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/util.js"></script>
+  <script type="text/javascript" src="js/constants.js"></script>
+  <script type="text/javascript" src="js/form.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
+  <script type="text/javascript">
+  navigator.geolocation.getCurrentPosition(GetLocation);
+  function gpsonclick(checkbox) {
+    if(checkbox.checked) {
+      GetLocation();
+    } else {
+      $("#userAddressField").val("");
+    }
+  }
+
+  function GetLocation() {
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      $("#userAddressField").val( position.coords.latitude + "," + position.coords.longitude);
+    }, function() {
+    });
+  }
+}
+</script>
 </body>
 </html>

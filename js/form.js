@@ -29,6 +29,9 @@ $( document ).ready(function(){
         return false;
     });
     
+    $(".iternaryPerson").on("mousedown", function(){
+        $(this).css("background-color","#ADD8E6");
+    });
     
     $("#addMeBtn").click(function(){
         partyid = getURLParameter("partyid");
