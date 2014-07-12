@@ -10,10 +10,26 @@ $( document ).ready(function(){
        $("#partyTitle").text(party.name);
        for(i=0; i<party.passengers.length; i++)
        {
-           
+           var partyid = party.passengers[i].partyid;
+ 		   var userid = party.passengers[i].id;
            $("#scrollView").append(
-               "<div class='iternaryPerson'><div class='smallNumberCircle'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<a href='/itinerary.html?partyid=" + party.passengers[i].partyid +"&userID=" + party.passengers[i].id  +"'><img class='rightBtn' src='css/img/right.jpg' height='42' width='42'></a><br></div><hr>"
+               "<div class='iternaryPerson'><input type='hidden' id='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<br></div><hr>"
 	  		    );
+	  		    
+	  		    ///itinerary.html?partyid=X&userid=Y
+                $(".iternaryPerson").mousedown(function(){
+                    $(this).css("background-color","#C0C0C0");
+                });
+                
+                $(".iternaryPerson").mouseup(function(){
+                    $(this).css("background-color","#fff");
+                });
+                
+                $(".iternaryPerson").click(function(){
+                    window.location.href="/itinerary.html?partyid=" + $("#hiddenValue").attr('name') + "&userid=" + $("#hiddenValue").val();
+                    return false;
+                });
+                
        }
    });
 });

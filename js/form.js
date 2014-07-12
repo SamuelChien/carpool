@@ -29,7 +29,6 @@ $( document ).ready(function(){
         return false;
     });
     
-    
     $("#addMeBtn").click(function(){
         partyid = getURLParameter("partyid");
         window.location.href="/addUser.html?partyid=" + partyid;
