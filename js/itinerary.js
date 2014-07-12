@@ -27,7 +27,7 @@ $( document ).ready(function(){
 				'<div class="numberCircle colorClass">passengerAbbr</div>'+
 				'<b>passengerRole:</b> passengerName <br>'+
 				'<b>Number:</b> passengerPhone <br>'+
-				'<b>Address:</b><a href="http://maps.google.com/?q=passengerMapQuery">passengerAddress</a> <br>'+
+				'<b>Address:</b><a href="http://maps.google.com/?q=passengerMapQuery"> passengerAddress</a> <br>'+
 			  '</div>'+
 			  '<hr>';
 		var html = passengerTemplate.replace('passengerAbbr', passenger.name[0].toUpperCase());
