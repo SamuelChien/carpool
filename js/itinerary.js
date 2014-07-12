@@ -1,10 +1,9 @@
 $( document ).ready(function(){
 	var partyid = getURLParameter('partyid');
 	var userid = getURLParameter('userid');
-	var driverid = "";
-	var passengers = [];
-	var driver = {};
 	getItineraryData(partyid, function(passengerList){
+		var driverid = "";
+		var passengers = [];
 		for(var i = 0; i < passengerList.length; i++) {
 			var pass = passengerList[i];
 			if(pass.id == userid) {
@@ -14,12 +13,7 @@ $( document ).ready(function(){
 		for(var i = 0; i < passengerList.length; i++) {
 			var pass = passengerList[i];
 			if(pass.driverid == driverid) {
-				if(pass.spot > 0) {
-					driver = pass;
-					passengers.push(pass);
-				} else {
-					passengers.push(pass);
-				}
+				passengers.push(pass);
 			}
 		}
 		passengers.sort(function(a, b) {return a.order - b.order});
