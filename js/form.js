@@ -28,10 +28,10 @@ $( document ).ready(function(){
     });
     
     $("#addUserBtn").click(function(){
-		
+		alert("hi");
 		var name = $("#userNameField").val();
 		var address = $("#userAddressField").val();
-		var userPhoneField = $("#userPhoneField").val();
+		var phone = $("#userPhoneField").val();
 		var partyid = getURLParameter("eid");
 		var spot = -1; 
 				
