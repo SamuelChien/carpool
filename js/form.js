@@ -13,4 +13,16 @@ $( document ).ready(function(){
             $("#availableSeat").hide();
         }
     });
+    
+    
+    $("#joinEventBtn").click(function(){
+        window.location.href="/listview.html?eid=" + $("#partyID").val();
+        return false;
+    });
+    
+    $("#createEventBtn").click(function(){
+        var eid = insertParty($("#partyNameField").val(), $("#partyAddressField").val());
+        window.location.href="/listview.html?eid=" + eid;
+        return false;
+    });
 });
