@@ -8,6 +8,8 @@ $( document ).ready(function(){
    var random_color = colors[Math.floor(Math.random()*colors.length)];
    $('#style.numberCircle').css('color', random_color);
    */
+   var randomIndex = Math.floor((Math.random() * 5) + 1);
+   var colorClass = "colorClass" + randomIndex.toString();
    list = getParty(partyid, function(party){
        $("#partyTitle").text(party.name);
        for(i=0; i<party.passengers.length; i++)
@@ -15,7 +17,7 @@ $( document ).ready(function(){
            var partyid = party.passengers[i].partyid;
  		   var userid = party.passengers[i].id;
            $("#scrollView").append(
-               "<div class='iternaryPerson'><input type='hidden' id='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<br></div><hr>"
+               "<div class='iternaryPerson'><input type='hidden' id='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle colorClass'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<br></div><hr>"
 	  		    );
 	  		    
 	  		    ///itinerary.html?partyid=X&userid=Y

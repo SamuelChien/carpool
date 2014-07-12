@@ -67,7 +67,6 @@ a.scroll:hover {
     height: 64px;
     padding: 3px;
 
-    background: #999;
     border: 2px solid #666;
     color: #666;
     text-align: center;
@@ -93,6 +92,21 @@ a.scroll:hover {
     font: 128px Arial, sans-serif;
 }
 
+.colorClass1{
+    background: #ff2d55;
+}
+.colorClass2{
+    background: #4cd964;
+}
+.colorClass3{
+    background: #ffcc00;
+}
+.colorClass4{
+    background: #5856d6;
+}
+.colorClass5{
+    background: #ff3b30;
+}
 .iternaryPerson
 {
     text-align:left;
