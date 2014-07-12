@@ -23,7 +23,7 @@ $( document ).ready(function(){
                 });
                 
                 $(".iternaryPerson").click(function(){
-                    window.location.href="/itinery.html?partyid=" + $("#hiddenValue").attr('name') + "&userid=" + $("#hiddenValue").val();
+                    window.location.href="/itinerary.html?partyid=" + $("#hiddenValue").attr('name') + "&userid=" + $("#hiddenValue").val();
                     return false;
                 });
                 
