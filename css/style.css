@@ -84,8 +84,7 @@ a.scroll:hover {
     height: 144px;
     padding: 3px;
 
-    background: #fff;
-    border: 2px solid #666;
+    border: 2px solid #fff;
     color: #fff;
     text-align: center;
 
