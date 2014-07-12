@@ -16,13 +16,15 @@ $( document ).ready(function(){
     
     
     $("#joinEventBtn").click(function(){
-        window.location.href="/listview.html?eid=" + $("#partyID").val();
+        window.location.href="/listview.html?partyid=" + $("#partyID").val();
         return false;
     });
     
     $("#createEventBtn").click(function(){
         insertParty($("#partyNameField").val(), $("#partyAddressField").val()).done(function(item){
-            window.location.href="/addUser.html?eid=" + item.id;
+            getPartyByGuid(item.id, function(){
+                window.location.href="/addUser.html?partyid=" + item.partyid;
+            })
         });
         return false;
     });
@@ -31,7 +33,7 @@ $( document ).ready(function(){
 		var name = $("#userNameField").val();
 		var address = $("#userAddressField").val();
 		var phone = $("#userPhoneField").val();
-		var partyid = getURLParameter("eid");
+		var partyid = getURLParameter("partyid");
 		var spot = -1; 
 				
         if($("#RideQuest").val() == "Driver")
@@ -41,7 +43,7 @@ $( document ).ready(function(){
 
 
         insertUser(name, phone, partyid, address, spot).done(function(item){
-            window.location.href="/listview.html?eid=" + item.id;
+            window.location.href="/listview.html?partyid=" + partyid;
             return false;
         });
         return false;
