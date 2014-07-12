@@ -16,9 +16,8 @@ $( document ).ready(function(){
     
     
     $("#joinEventBtn").click(function(){
-        alert($("#partyID").val());
-        //window.location.href="/listview.html?eid=" + $("#partyID").val();
-        //return false;
+        window.location.href="/listview.html?eid=" + $("#partyID").val();
+        return false;
     });
     
     $("#createEventBtn").click(function(){
@@ -46,7 +45,6 @@ $( document ).ready(function(){
             window.location.href="/listview.html?eid=" + item.id;
         });
         return false;
-        
         
     });
 });
