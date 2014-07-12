@@ -13,7 +13,7 @@ $( document ).ready(function(){
  		   var randomIndex =  party.passengers[i].name[0].charCodeAt(0) % 6;
            var colorClass = "colorClass" + randomIndex.toString();
            $("#scrollView").append(
-               "<div class='iternaryPerson'><input type='hidden' id='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle " + colorClass + "'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<br></div><hr>"
+               "<div class='iternaryPerson'><input type='hidden' class='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle " + colorClass + "'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<br></div><hr>"
 	  		    );
 	  		    
 	  		    ///itinerary.html?partyid=X&userid=Y
@@ -26,7 +26,7 @@ $( document ).ready(function(){
                 });
                 
                 $(".iternaryPerson").click(function(){
-                    window.location.href="/itinerary.html?partyid=" + $("#hiddenValue").attr('name') + "&userid=" + $("#hiddenValue").val();
+                    window.location.href="/itinerary.html?partyid=" + $(this).find("input:first").attr('name') + "&userid=" + $(this).find("input:first").val();
                     return false;
                 });
                 
