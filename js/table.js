@@ -3,9 +3,11 @@ $( document ).ready(function(){
    var title;
    var list;
    var partyid;
+/*
    var colors = ['#ff0000', '#00ff00', '#0000ff'];
    var random_color = colors[Math.floor(Math.random()*colors.length)];
    $('#style.numberCircle').css('color', random_color);
+   */
    list = getParty(partyid, function(party){
        $("#partyTitle").text(party.name);
        for(i=0; i<party.passengers.length; i++)
