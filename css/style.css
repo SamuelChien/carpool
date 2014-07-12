@@ -141,6 +141,12 @@ a.scroll:hover {
 	font-family: inherit;
 	font-size:48px;
 }
+
+#scrollView{
+    height:800px;
+    overflow-y:auto;
+}
+
 .login-form .form-wrapper-01 .inputbox {
 	width:88%;
 }
