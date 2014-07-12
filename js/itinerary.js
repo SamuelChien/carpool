@@ -37,4 +37,4 @@ $( document ).ready(function(){
 		html = html.replace('passengerAddressQuery', passenger.address.replace(' ', '+'));
 		return html;
 	}
-}
+});
