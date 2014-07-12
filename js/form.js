@@ -50,6 +50,7 @@ $( document ).ready(function(){
 
         insertUser(name, phone, partyid, address, spot).val().done(function(item){
             window.location.href="/listview.html?eid=" + item.id;
+            return false;
         });
         return false;
         
