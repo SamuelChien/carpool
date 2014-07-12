@@ -9,7 +9,7 @@ function insertParty(partyName, address) {
 }
 
 function insertUser(name, phone, partyid, address, spot) {
-  var item = {name : name, phone : phone, partyid : id, address : address, spot : spot}
+  var item = {name : name, phone : phone, partyid : partyid, address : address, spot : spot}
   return TABLE_CLIENT.getTable("user").insert(item);
 }
 
