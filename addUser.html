@@ -4,6 +4,7 @@
 	<title>Join Meetup</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="font/css/fontello.css" />
+  <link rel="stylesheet" type="text/css" href="css/switch.css" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
 
 </head>
@@ -16,8 +17,18 @@
         <form class="form-wrapper-01">
           <input id="userNameField" class="inputbox " type="text" placeholder="Name" />
           <input id="userAddressField" class="inputbox" type="text" placeholder="Address" />
-          <input type="checkbox" class="inputbox" value="GPS" onclick='gpsonclick(this);'/>
-          <p>GPS Location</p>
+
+          <div style="margin-top:-40px; margin-bottom:20px;">
+          <div class="onoffswitch" onclick="gpsonclick()">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+            <label class="onoffswitch-label" for="myonoffswitch">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
+            <div style="display:inline-block; height:30px; vertical-align:bottom;">Use Current Location</div>
+          </div>
+
           <input id="userPhoneField"class="inputbox" type="number" placeholder="Phone Number" />
           <select id="RideQuest" class="inputbox inputSelection">
             <option value="Passenger">I need a ride</option>
@@ -48,22 +59,25 @@
 
   <script type="text/javascript">
   navigator.geolocation.getCurrentPosition(GetLocation);
-  function gpsonclick(checkbox) {
-    if(checkbox.checked) {
+  var gpsCurrentOff = true;
+  function gpsonclick() {
+    if(gpsCurrentOff) {
       GetLocation();
+      gpsCurrentOff = false;
     } else {
       $("#userAddressField").val("");
+      gpsCurrentOff = true;
     }
   }
 
   function GetLocation() {
-  if(navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      $("#userAddressField").val( position.coords.latitude + "," + position.coords.longitude);
-    }, function() {
-    });
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        $("#userAddressField").val( position.coords.latitude + "," + position.coords.longitude);
+      }, function() {
+      });
+    }
   }
-}
-</script>
+  </script>
 </body>
 </html>
