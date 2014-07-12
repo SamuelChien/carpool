@@ -90,7 +90,8 @@ a.scroll:hover {
 
     width: 144px;
     height: 144px;
-    padding: 3px;
+    padding-bottom: 30px;
+    
 
     border: 2px solid #fff;
     color: #fff;
@@ -115,6 +116,13 @@ a.scroll:hover {
     background: #ff3b30;
 }
 .iternaryPerson
+{
+    text-align:left;
+    padding:60px;
+    font-size:48px;
+}
+
+.iternaryPersonBig
 {
     text-align:left;
     padding:60px;

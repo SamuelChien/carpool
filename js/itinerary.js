@@ -23,7 +23,7 @@ $( document ).ready(function(){
 	});
 
 	function renderPassenger(passenger) {
-		var passengerTemplate = '<div class="iternaryPerson">'+
+		var passengerTemplate = '<div class="iternaryPersonBig">'+
 				'<div class="numberCircle colorClass">passengerAbbr</div>'+
 				'<b>passengerRole:</b> passengerName <br>'+
 				'<b>Number:</b> <a href="tel:'+'passengerPhone">passengerPhone</a> <br>'+
