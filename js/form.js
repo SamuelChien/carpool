@@ -28,7 +28,6 @@ $( document ).ready(function(){
     });
     
     $("#addUserBtn").click(function(){
-		alert("hi");
 		var name = $("#userNameField").val();
 		var address = $("#userAddressField").val();
 		var phone = $("#userPhoneField").val();
