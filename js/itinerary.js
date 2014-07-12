@@ -38,11 +38,7 @@ $( document ).ready(function(){
 				'<div class="numberCircle">passengerAbbr</div>'+
 				'<b>Driver:</b> passengerName <br>'+
 				'<b>Number:</b> passengerPhone <br>'+
-<<<<<<< HEAD
-				'<b>Address:</b><a href="http://maps.google.com/?q=passengerMapQuery">1 Infinite Loop,<br> passengerAddress</a> <br>'+
-=======
-				'<b>Address:</b><a href="http://maps.google.com/?q=passengerAddressQuery">passengerAddress</a> <br>'+
->>>>>>> fb2f5b241c23de576e726257180545301263f138
+				'<b>Address:</b><a href="http://maps.google.com/?q=passengerMapQuery">passengerAddress</a> <br>'+
 			  '</div>'+
 			  '<hr>';
 		var html = passengerTemplate.replace('passengerAbbr', passenger.name[0].toUpperCase());
