@@ -4,7 +4,7 @@ $( document ).ready(function(){
 	var driverid = getURLParameter('driverid');
 	var passengers;
 	var driver;
-	getItineraryData(partyid, function(partyid, passengerList){
+	getItineraryData(partyid, function(passengerList){
 		for(var i = 0; i < passengerList.length; i++) {
 			var pass = passengerList[i];
 			if(pass.driverid == driverid) {
