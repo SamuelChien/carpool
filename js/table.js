@@ -10,7 +10,7 @@ $( document ).ready(function(){
            var partyid = party.passengers[i].partyid;
  		   var userid = party.passengers[i].id;
            $("#scrollView").append(
-               "<div class='iternaryPerson'><input type='hidden' id='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<img class='rightBtn' src='css/img/right.jpg' height='42' width='42'><br></div><hr>"
+               "<div class='iternaryPerson'><input type='hidden' id='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<br></div><hr>"
 	  		    );
 	  		    
 	  		    ///itinerary.html?partyid=X&userid=Y
@@ -23,7 +23,7 @@ $( document ).ready(function(){
                 });
                 
                 $(".iternaryPerson").click(function(){
-                    window.location.href="/listview.html?partyid=" + $("#hiddenValue").attr('name') + "&userid=" + $("#hiddenValue").val();
+                    window.location.href="/itinery.html?partyid=" + $("#hiddenValue").attr('name') + "&userid=" + $("#hiddenValue").val();
                     return false;
                 });
                 
