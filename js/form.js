@@ -29,8 +29,9 @@ $( document ).ready(function(){
         return false;
     });
     
-    $(".iternaryPerson").on("mousedown", function(){
-        $(this).css("background-color","#ADD8E6");
+    $(".iternaryPerson").on("click", function(){
+        //$(this).css("background-color","#ADD8E6");
+        alert("yo");
     });
     
     $("#addMeBtn").click(function(){
