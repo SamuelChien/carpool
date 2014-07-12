@@ -8,12 +8,8 @@ function insertParty(partyName, address) {
   return TABLE_CLIENT.getTable("party").insert(item);
 }
 
-function insertUser(name, phone, guid, address, spot) {
-  var partyid;
-  getPartyByGuid(guid, function(item){
-      partyid = item.partyid;
-  })
-  var item = {name : name, phone : phone, id : guid, address : address, spot : spot}
+function insertUser(name, phone, partyid, address, spot) {
+  var item = {name : name, phone : phone, partyid : id, address : address, spot : spot}
   return TABLE_CLIENT.getTable("user").insert(item);
 }
 
