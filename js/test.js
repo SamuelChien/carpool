@@ -1,7 +1,7 @@
-  
+
   function insertFakeData() {
     var client = new WindowsAzure.MobileServiceClient(
-      "https://licarpool.azure-mobile.net/",
+      "licarpool.azure-mobile.net/",
       "bbIcqJfgUPjcZiVNrFujvChujcZgyb85"
       );
 
