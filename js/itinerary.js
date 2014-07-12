@@ -41,7 +41,7 @@ $( document ).ready(function(){
 		html = html.replace('passengerPhone', passenger.phone);
 		html = html.replace('passengerMapQuery', passenger.address.replace(' ', '+'));
 		
-		var randomIndex = passenger.name[0].charCodeAt(0) % 6;
+		var randomIndex = passenger.name[0].charCodeAt(0) % 5 + 1;
         var colorClass = "colorClass" + randomIndex.toString();
 		html = html.replace('colorClass', colorClass);
 		return html;

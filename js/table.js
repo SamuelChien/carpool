@@ -10,7 +10,7 @@ $( document ).ready(function(){
        {
            var partyid = party.passengers[i].partyid;
  		   var userid = party.passengers[i].id;
- 		   var randomIndex =  party.passengers[i].name[0].charCodeAt(0) % 6;
+ 		   var randomIndex =  party.passengers[i].name[0].charCodeAt(0) % 5 + 1;
            var colorClass = "colorClass" + randomIndex.toString();
            $("#scrollView").append(
                "<div class='iternaryPerson'><input type='hidden' class='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle " + colorClass + "'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<br></div><hr>"
