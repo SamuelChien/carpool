@@ -30,6 +30,11 @@ h1 {
 	margin-top:15%;
 	margin-bottom:10%;
 }
+h2 {
+    font-size:64px;
+	margin-top:10%;
+	margin-bottom:5%;
+}
 hr {
 	border: 1px dashed #eee;
 	margin: 20px 0;
@@ -73,6 +78,11 @@ a.scroll:hover {
 	margin: 0;
 	padding: 10px 0;
 }
+.inputSelection{
+    background-color:#fff;
+    color:#A4A4A4;
+}
+
 .form-wrapper-01 .inputbox {
 	border: 1px solid #eaedf2;
 	border-radius:3px;
