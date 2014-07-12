@@ -60,7 +60,7 @@ a.scroll:hover {
 	padding:30px;
 	text-align:center;
 	float:left;
-	margin:5% 5%;
+	margin:3% 3%;
 	height: 1200px;
 }
 .login-form, .forgot-pwd {
@@ -105,7 +105,7 @@ a.scroll:hover {
 	font-family: inherit;
 	font-size: 48px;
 	font-weight: 700;
-	padding: 10px 20px;
+	padding: 3% 6%;
 }
 .form-wrapper-01 .button:hover {
 	background:#0e778a;
