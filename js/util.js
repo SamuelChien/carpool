@@ -23,6 +23,16 @@ function getParty(partyid) {
   })
 }
 
+function getPartyByGuid(guid) {
+  var partyApi = BASE_URL + "api/partyid?id=" + guid;
+  $.getJSON(partyApi, {
+    format: "json"
+  })
+  .done(function(data) {
+    return data;
+  })
+}
+
 function getIternaryDate() {
   
 }
