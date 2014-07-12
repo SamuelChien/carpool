@@ -21,8 +21,9 @@ $( document ).ready(function(){
     });
     
     $("#createEventBtn").click(function(){
-        var eid = insertParty($("#partyNameField").val(), $("#partyAddressField").val());
-        window.location.href="/listview.html?eid=" + eid;
+        var eid = insertParty($("#partyNameField").val(), $("#partyAddressField").val()).done(function(item){
+            window.location.href="/listview.html?eid=" + item.id;
+        });
         return false;
     });
 });
