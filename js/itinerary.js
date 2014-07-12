@@ -24,7 +24,6 @@ $( document ).ready(function(){
 			}
 		}
 		passengers.sort(function(a, b) {return a.order - b.order});
-		$('.itinerary').append(renderPassenger(driver));
 		for(var i = 0; i < passengers.length; i++) {
 			$('.itinerary').append(renderPassenger(passengers[i]));
 		}
