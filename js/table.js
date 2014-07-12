@@ -5,7 +5,7 @@ $( document ).ready(function(){
    var partyid;
    
    list = getParty(partyid, function(party){
-       $("#partyTitle").text(party.name + " ID: " + party.ID.toString());
+       $("#partyTitle").text(party.name + " ID: " + party.partyid.toString());
        var mapContent = '<a href="http://maps.google.com/?q=passengerMapQuery">passengerAddress</a>';
        mapContent = mapContent.replace('passengerAddress', party.address);
           mapContent = mapContent.replace('passengerMapQuery', party.address);
