@@ -7,11 +7,9 @@ $( document ).ready(function(){
        $("#partyTitle").text(party.name);
        for(i=0; i<party.passengers.length; i++)
        {
+           
            $("#scrollView").append(
-               "<div class='iternaryPerson'>
-				<div class='smallNumberCircle'>" + party.passengers[i].name[0] + "</div>
-				<b>" + party.passengers[i].name + "<img class='rightBtn' src='css/img/right.jpg' height='42' width='42'><br>
-	  		    </div><hr>"
+               "<div class='iternaryPerson'><div class='smallNumberCircle'>" + party.passengers[i].name[0] + "</div><b>" + party.passengers[i].name + "<img class='rightBtn' src='css/img/right.jpg' height='42' width='42'><br></div><hr>"
 	  		    );
        }
    });
