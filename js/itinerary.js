@@ -1,4 +1,3 @@
-
 $( document ).ready(function(){
 	var partyid = getURLParameter('partyid');
 	var userid = getURLParameter('userid');
