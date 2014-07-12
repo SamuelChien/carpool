@@ -24,7 +24,7 @@ function getParty(partyid) {
 }
 
 function getPartyByGuid(guid) {
-  var partyApi = BASE_URL + "api/party?id=" + guid;
+  var partyApi = BASE_URL + "api/partyid?id=" + guid;
   $.getJSON(partyApi, {
     format: "json"
   })
