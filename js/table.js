@@ -11,6 +11,12 @@ $( document ).ready(function(){
            $("#scrollView").append(
                "<div class='iternaryPerson'><div class='smallNumberCircle'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<a href='/itinerary.html?partyid=" + party.passengers[i].partyid +"&userid=" + party.passengers[i].id  +"'><img class='rightBtn' src='css/img/right.jpg' height='42' width='42'></a><br></div><hr>"
 	  		    );
+	  		    
+                $(".iternaryPerson").click(function(){
+                    $(this).css("background-color","#ADD8E6");
+                    //alert("yo");
+                    //return false;
+                });
        }
    });
 });

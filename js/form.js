@@ -29,12 +29,6 @@ $( document ).ready(function(){
         return false;
     });
     
-    $(".smallNumberCircle").click(function(){
-        //$(this).css("background-color","#ADD8E6");
-        alert("yo");
-        return false;
-    });
-    
     $("#addMeBtn").click(function(){
         partyid = getURLParameter("partyid");
         window.location.href="/addUser.html?partyid=" + partyid;
