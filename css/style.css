@@ -30,7 +30,7 @@ p2{
    font-size:18px; 
    text-decoration:none;
    padding:0px;
-   margin:5px;
+   margin:2%;
    color:#000;
 }
 
@@ -42,8 +42,8 @@ h1 {
 }
 h2 {
     font-size:64px;
-	margin-top:10%;
-	margin-bottom:5%;
+	margin-top:6%;
+	margin-bottom:0px;
 }
 hr {
 	border: 1px dashed #eee;
