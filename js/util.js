@@ -18,9 +18,9 @@ function getParty(partyid) {
   $.getJSON(partyApi, {
     format: "json"
   })
-  .done(function(data)) {
-    return data
-  }
+  .done(function(data) {
+    return data;
+  })
 }
 
 function getIternaryDate() {
