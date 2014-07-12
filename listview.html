@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Create Event</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="font/css/fontello.css" />
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
+	<title>List View</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="font/css/fontello.css" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,700' rel='stylesheet' type='text/css'>
 
-  <script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.3.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-  <script type="text/javascript" src="js/util.js"></script>
-  <script type="text/javascript" src="js/constants.js"></script>
-  <script type="text/javascript" src="js/test.js"></script>
 </head>
 <body>
-  <div id="listview">
-    <script>
-    $(document).ready(function() {
-      loadPageData();
-    });  
-    </script>
+<!--Login Section-->
+<div class="section" id="section1">
+  	<div class="login-form">
+    	<h2>Pool Party</h2>
+    	<div>
+			<hr>
+	  		<div class="iternaryPerson">
+				<div class="smallNumberCircle">S</div>
+				<b>Samuel Chien <img class="rightBtn" src="css/img/right.jpg" height="42" width="42"><br>
+	  		</div>
+	
+	  		<hr>
+	  		<div class="iternaryPerson">
+				<div class="smallNumberCircle">S</div>
+				<b>Samuel Chien <img class="rightBtn" src="css/img/right.jpg" height="42" width="42"><br>
+	  		</div>
+	  		<hr>
+	  		<div class="iternaryPerson">
+				<div class="smallNumberCircle">S</div>
+				<b>Samuel Chien <img class="rightBtn" src="css/img/right.jpg" height="42" width="42"><br>
+	  		</div>
+	
+	  		<hr>
+	  		<div class="iternaryPerson">
+				<div class="smallNumberCircle">S</div>
+				<b>Samuel Chien <img class="rightBtn" src="css/img/right.jpg" height="42" width="42"><br>
+	  		</div>
+	  		<hr>
+			<form class="form-wrapper-01"><p><a id="createEventBtn" href="#" class="button">Add Me <i class="icon-paper-plane"></i></a></p></form>
+	  	</div>
+  	</div>
+</div>
+<!--END: Login Section-->
+<!--Script for Horizontal Scrolling-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/form.js"></script>
 
-  </div>
-  <!--Script for Horizontal Scrolling-->
-  
-  <script>
-  function loadPageData() {
-    var listviewApi = BASE_URL + "party?id=" + getURLParameter("id");
-    $.getJSON( listviewApi, {
-      format: "json"
-    })
-    .done(function( data ) {
-      $.each( data.items, function( i, item ) {
-        $('#listview').appendChild(item);
-      });
-    });
-  }
-  </script>
 </body>
 </html>
