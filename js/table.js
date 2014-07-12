@@ -8,6 +8,7 @@ $( document ).ready(function(){
        $("#partyTitle").text(party.name);
        var mapContent = '<a href="http://maps.google.com/?q=passengerMapQuery">passengerAddress</a>';
        mapContent = mapContent.replace('passengerAddress', party.address);
+          mapContent = mapContent.replace('passengerMapQuery', party.address);
        
        $("#addressPlace").html(mapContent);
        for(i=0; i<party.passengers.length; i++)
