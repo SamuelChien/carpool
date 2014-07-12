@@ -9,7 +9,7 @@ $( document ).ready(function(){
        {
            
            $("#scrollView").append(
-               "<div class='iternaryPerson'><div class='smallNumberCircle'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<a href='/itinerary.html?partyid=" + party.passengers[i].partyid +"&name=" + party.passengers[i].name  +"'><img class='rightBtn' src='css/img/right.jpg' height='42' width='42'></a><br></div><hr>"
+               "<div class='iternaryPerson'><div class='smallNumberCircle'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<a href='/itinerary.html?partyid=" + party.passengers[i].partyid +"&userID=" + party.passengers[i].id  +"'><img class='rightBtn' src='css/img/right.jpg' height='42' width='42'></a><br></div><hr>"
 	  		    );
        }
    });
