@@ -21,9 +21,31 @@ $( document ).ready(function(){
     });
     
     $("#createEventBtn").click(function(){
-        var eid = insertParty($("#partyNameField").val(), $("#partyAddressField").val()).done(function(item){
+        insertParty($("#partyNameField").val(), $("#partyAddressField").val()).done(function(item){
+            window.location.href="/addUser.html?eid=" + item.id;
+        });
+        return false;
+    });
+    
+    $("#addUserBtn").click(function(){
+		
+		var name = $("#userNameField").val();
+		var address = $("#userAddressField").val();
+		var phone = $("#userPhoneField").val();
+		var partyid = getURLParameter("eid");
+		var spot = -1; 
+		
+        if($("#RideQuest").val() == "Driver")
+        {
+            spot = $("#availableSeat").val();
+        }
+
+
+        insertUser(name, phone, partyid, address, spot).val()).done(function(item){
             window.location.href="/listview.html?eid=" + item.id;
         });
         return false;
+        
+        
     });
 });
