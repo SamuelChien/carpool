@@ -13,7 +13,7 @@ $( document ).ready(function(){
  		   var randomIndex = Math.floor((Math.random() * 5) + 1);
            var colorClass = "colorClass" + randomIndex.toString();
            $("#scrollView").append(
-               "<div class='iternaryPerson'><input type='hidden' id='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle colorClass'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<br></div><hr>"
+               "<div class='iternaryPerson'><input type='hidden' id='hiddenValue' name='" + partyid + "' value='" + userid + "'><div class='smallNumberCircle" + colorClass + "'>" + party.passengers[i].name[0].toUpperCase() + "</div><b>" + party.passengers[i].name + "<br></div><hr>"
 	  		    );
 	  		    
 	  		    ///itinerary.html?partyid=X&userid=Y
