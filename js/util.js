@@ -12,3 +12,7 @@ function insertUser(name, phone, partyid, address, spot) {
   var item = {name : name, phone : phone, partyid : partyid, address : address, spot : spot}
   return TABLE_CLIENT.getTable("user").insert(item);
 }
+
+function getIternaryDate() {
+  
+}

@@ -27,7 +27,7 @@
   
   <script>
   function loadPageData() {
-    var listviewApi = BASE_URL + "/party?id=" + getURLParameter("id");
+    var listviewApi = BASE_URL + "party?id=" + getURLParameter("id");
     $.getJSON( listviewApi, {
       format: "json"
     })
