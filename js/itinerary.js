@@ -2,8 +2,8 @@
 $( document ).ready(function(){
 	var partyid = getURLParameter('partyid');
 	var driverid = getURLParameter('driverid');
-	var passengers;
-	var driver;
+	var passengers = [];
+	var driver = [];
 	getItineraryData(partyid, function(passengerList){
 		for(var i = 0; i < passengerList.length; i++) {
 			var pass = passengerList[i];
