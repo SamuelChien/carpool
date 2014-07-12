@@ -23,14 +23,13 @@ $( document ).ready(function(){
 	});
 
 	function renderPassenger(passenger) {
-		var passengerTemplate = '
-			  <div class="iternaryPerson">
-				<div class="numberCircle">passengerAbbr</div>
-				<b>Driver:</b> passengerName <br>
-				<b>Number:</b> passengerPhone <br>
-				<b>Address:</b><a href="http://maps.google.com/?q=passengerAddressQuery">1 Infinite Loop,<br> passengerAddress</a> <br>
-			  </div>
-			  <hr>';
+		var passengerTemplate = '<div class="iternaryPerson">'+
+				'<div class="numberCircle">passengerAbbr</div>'+
+				'<b>Driver:</b> passengerName <br>'+
+				'<b>Number:</b> passengerPhone <br>'+
+				'<b>Address:</b><a href="http://maps.google.com/?q=passengerAddressQuery">1 Infinite Loop,<br> passengerAddress</a> <br>'+
+			  '</div>'+
+			  '<hr>';
 		var html = passengerTemplate.replace('passengerAbbr', passenger.name[0].toUpper());
 		html = html.replace('passengerAddress', passenger.address);
 		html = html.replace('passengerName', passenger.name);
