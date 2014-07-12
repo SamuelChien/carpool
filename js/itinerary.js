@@ -26,7 +26,7 @@ $( document ).ready(function(){
 		var passengerTemplate = '<div class="iternaryPerson">'+
 				'<div class="numberCircle colorClass">passengerAbbr</div>'+
 				'<b>passengerRole:</b> passengerName <br>'+
-				'<b>Number:</b> <a href="tel:'+'"passengerPhone>passengerPhone</a> <br>'+
+				'<b>Number:</b> <a href="tel:'+'passengerPhone">passengerPhone</a> <br>'+
 				'<b>Address:</b><a href="http://maps.google.com/?q=passengerMapQuery"> passengerAddress</a> <br>'+
 			  '</div>'+
 			  '<hr>';
