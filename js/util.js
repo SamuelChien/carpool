@@ -4,7 +4,7 @@ function getURLParameter(name) {
 }
 
 function insertParty(partyName, address) {
-  var item = { partyname : partyName, address : address };
+  var item = { name : partyName, address : address };
   return TABLE_CLIENT.getTable("party").insert(item);
 }
 
