@@ -1,5 +1,5 @@
 $( document ).ready(function(){
-   var partyid = getURLParameter("id");
+   var partyid = getURLParameter("partyid");
    var title;
    var list;
    var partyid;
