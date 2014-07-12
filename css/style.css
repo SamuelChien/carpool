@@ -53,7 +53,8 @@ a.scroll:hover {
 }
 .rightBtn{
     float:right;
-    margin-right:10%;
+    margin-right:5%;
+    margin-top:1%;
 }
 
 .smallNumberCircle{
@@ -62,8 +63,8 @@ a.scroll:hover {
     border-radius: 50%;
     behavior: url(PIE.htc); /* remove if you don't care about IE8 */
 
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
     padding: 3px;
 
     background: #999;
@@ -71,7 +72,7 @@ a.scroll:hover {
     color: #666;
     text-align: center;
 
-    font: 45px Arial, sans-serif;
+    font: 58px Arial, sans-serif;
 }
 
 .numberCircle {
@@ -96,7 +97,7 @@ a.scroll:hover {
 {
     text-align:left;
     margin-left:5%;
-    font-size:36px;
+    font-size:48px;
 }
 .section {
 	margin:0px;
