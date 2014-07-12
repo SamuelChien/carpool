@@ -18,7 +18,7 @@ $( document ).ready(function(){
 		}
 		passengers.sort(function(a, b) {return a.order - b.order});
 		for(var i = 0; i < passengers.length; i++) {
-			$('.itinerary')[0].append(renderPassenger(passengers[i]));
+			$('.itinerary').append(renderPassenger(passengers[i]));
 		}
 	});
 
@@ -30,7 +30,7 @@ $( document ).ready(function(){
 				'<b>Address:</b><a href="http://maps.google.com/?q=passengerAddressQuery">1 Infinite Loop,<br> passengerAddress</a> <br>'+
 			  '</div>'+
 			  '<hr>';
-		var html = passengerTemplate.replace('passengerAbbr', passenger.name[0].toUpper());
+		var html = passengerTemplate.replace('passengerAbbr', passenger.name[0].toUpperCase());
 		html = html.replace('passengerAddress', passenger.address);
 		html = html.replace('passengerName', passenger.name);
 		html = html.replace('passengerPhone', passenger.phone);
