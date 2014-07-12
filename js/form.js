@@ -32,6 +32,7 @@ $( document ).ready(function(){
     $(".iternaryPerson").click(function(){
         //$(this).css("background-color","#ADD8E6");
         alert("yo");
+        return false;
     });
     
     $("#addMeBtn").click(function(){
