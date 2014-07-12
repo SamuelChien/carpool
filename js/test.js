@@ -1,4 +1,4 @@
-  <script type="text/javascript">
+  
   function insertFakeData() {
     var client = new WindowsAzure.MobileServiceClient(
       "https://licarpool.azure-mobile.net/",
@@ -11,4 +11,4 @@
       insertUser("Josh", 1234567, item.partyid, "J address", 3);
     });
   }
-  </script>
+  
