@@ -4,8 +4,15 @@ $( document ).ready(function(){
    var list;
    var partyid;
    list = getParty(partyid, function(party){
-       //alert(listitems);
-       alert(party.name);
-       alert(party.passengers);
+       $("#partyTitle").text(party.name);
+       for(i=0; i<party.passengers.length; i++)
+       {
+           $("#scrollView").append(
+               "<div class='iternaryPerson'>
+				<div class='smallNumberCircle'>" + party.passengers[i].name[0] + "</div>
+				<b>" + party.passengers[i].name + "<img class='rightBtn' src='css/img/right.jpg' height='42' width='42'><br>
+	  		    </div><hr>"
+	  		    );
+       }
    });
 });
