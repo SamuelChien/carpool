@@ -6,6 +6,10 @@ $( document ).ready(function(){
    
    list = getParty(partyid, function(party){
        $("#partyTitle").text(party.name);
+       var mapContent = '<p><a href="http://maps.google.com/?q=passengerMapQuery">passengerAddress</a></p>';
+       mapContent = mapContent.replace('passengerAddress', party.address);
+       
+       $("#addressPlace").innerHTML(mapContent);
        for(i=0; i<party.passengers.length; i++)
        {
            var partyid = party.passengers[i].partyid;
