@@ -6,9 +6,8 @@ $( document ).ready(function(){
    getPartyByGuid(eid, function(item){
        partyid = item.partyid;
        title = item.name;
-       alert(title);
-   })
-   
+       //alert(title);
+   }).done();
    list = getParty(partyid, function(listitems){
        alert(listitems);
    });
