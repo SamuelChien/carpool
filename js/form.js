@@ -29,6 +29,13 @@ $( document ).ready(function(){
         return false;
     });
     
+    
+    $("#addMeBtn").click(function(){
+        partyid = getURLParameter("partyid");
+        window.location.href="/addUser.html?partyid=" + partyid;
+        return false;
+    });
+    
     $("#addUserBtn").click(function(){
 		var name = $("#userNameField").val();
 		var address = $("#userAddressField").val();
