@@ -13,6 +13,16 @@ function insertUser(name, phone, partyid, address, spot) {
   return TABLE_CLIENT.getTable("user").insert(item);
 }
 
+function getParty(partyid) {
+  var partyApi = BASE_URL + "api/party?partyid" + partyid;
+  $.getJSON(partyApi, {
+    format: "json"
+  })
+  .done(function(data) {
+    return data;
+  })
+}
+
 function getIternaryDate() {
   
 }
