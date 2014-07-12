@@ -25,6 +25,15 @@ p {
 	margin-bottom:10%;
 	padding: 0 6%;
 }
+
+p2{
+   font-size:18px; 
+   text-decoration:none;
+   padding:0px;
+   margin:0px;
+}
+
+
 h1 {
     font-size:64px;
 	margin-top:15%;
