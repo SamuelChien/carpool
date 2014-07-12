@@ -21,12 +21,12 @@ h1, h2, h3 {
 p {
 	margin-bottom:15px;
 	color:#999;
-	font-size:24px;
+	font-size:48px;
 	margin-bottom:10%;
 }
 h1 {
     font-size:64px;
-	margin-top:40%;
+	margin-top:20%;
 	margin-bottom:10%;
 }
 hr {
@@ -81,7 +81,7 @@ a.scroll:hover {
 	outline:none;
 	margin-bottom:10%;
 	font-family: inherit;
-	font-size:24px;
+	font-size:32px;
 }
 .login-form .form-wrapper-01 .inputbox {
 	width:88%;
@@ -102,7 +102,7 @@ a.scroll:hover {
 	color: #FFFFFF;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: 24px;
+	font-size: 32px;
 	font-weight: 700;
 	padding: 10px 20px;
 }
