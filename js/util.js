@@ -14,7 +14,7 @@ function insertUser(name, phone, partyid, address, spot) {
 }
 
 function getParty(partyid) {
-  var partyApi = BASE_URL + "api/party?partyid" + partyid;
+  var partyApi = BASE_URL + "api/party?partyid=" + partyid;
   $.getJSON(partyApi, {
     format: "json"
   })
