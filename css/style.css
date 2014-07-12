@@ -29,9 +29,6 @@ p {
 p2{
    font-size:18px; 
    text-decoration:none;
-   padding:0px;
-   margin:5px;
-   color:#000;
 }
 
 
@@ -42,8 +39,8 @@ h1 {
 }
 h2 {
     font-size:64px;
-	margin-top:10%;
-	margin-bottom:5%;
+	margin-top:6%;
+	margin-bottom:0px;
 }
 hr {
 	border: 1px dashed #eee;
@@ -51,6 +48,7 @@ hr {
 }
 a {
 	text-decoration:none;
+	color:#999;
 }
 a.scroll {
 	color: #666;
@@ -92,7 +90,8 @@ a.scroll:hover {
 
     width: 144px;
     height: 144px;
-    padding: 3px;
+    padding-bottom: 30px;
+    
 
     border: 2px solid #fff;
     color: #fff;
@@ -121,6 +120,13 @@ a.scroll:hover {
     text-align:left;
     padding:60px;
     font-size:48px;
+}
+
+.iternaryPersonBig
+{
+    text-align:left;
+    padding:60px;
+    font-size:32px;
 }
 .section {
 	margin:0px;

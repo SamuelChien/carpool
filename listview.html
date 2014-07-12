@@ -24,7 +24,7 @@
 	  		<hr>
 	  	</div>
       
-		<form class="form-wrapper-01"><p><a id="addMeBtn" href="#" class="button">Join the Party!<i class="icon-paper-plane"></i></a>
+		<form class="form-wrapper-01"><p><a id="addMeBtn" href="#" class="button">Join!<i class="icon-paper-plane"></i></a>
     <a id="shareBtn" href="#" class="button">Share!<i class="icon-paper-plane"></i></a>
     </p></form>
   	</div>
@@ -33,9 +33,9 @@
 <!--Script for Horizontal Scrolling-->
 <script type="text/javascript">
 $(document).ready(function(){
-  var string = 'body=Join the party car pool:' + document.URL;
+  var string = 'mailto:?subject=Join the party car pool!&body=Follow the link to join car pool: ' + document.URL;
   $('#shareBtn').attr('href', string);
-}
+});
 </script>
 </body>
 </html>

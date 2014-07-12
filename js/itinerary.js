@@ -23,11 +23,11 @@ $( document ).ready(function(){
 	});
 
 	function renderPassenger(passenger) {
-		var passengerTemplate = '<div class="iternaryPerson">'+
+		var passengerTemplate = '<div class="iternaryPersonBig">'+
 				'<div class="numberCircle colorClass">passengerAbbr</div>'+
 				'<b>passengerRole:</b> passengerName <br>'+
-				'<b>Number:</b> passengerPhone <br>'+
-				'<b>Address:</b><a href="http://maps.google.com/?q=passengerMapQuery">passengerAddress</a> <br>'+
+				'<b>Number:</b> <a href="tel:'+'passengerPhone">passengerPhone</a> <br>'+
+				'<b>Address:</b><a href="http://maps.google.com/?q=passengerMapQuery"> passengerAddress</a> <br>'+
 			  '</div>'+
 			  '<hr>';
 		var html = passengerTemplate.replace('passengerAbbr', passenger.name[0].toUpperCase());
@@ -38,6 +38,7 @@ $( document ).ready(function(){
 		}
 		html = html.replace('passengerAddress', passenger.address);
 		html = html.replace('passengerName', passenger.name);
+		html = html.replace('passengerPhone', passenger.phone);
 		html = html.replace('passengerPhone', passenger.phone);
 		html = html.replace('passengerMapQuery', passenger.address.replace(' ', '+'));
 		
